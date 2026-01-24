@@ -75,23 +75,8 @@
         <div class="absolute bottom-2 right-2 text-[10px] opacity-50">Background: Unsplash</div>
 
         <div class="w-full max-w-4xl relative z-10">
-            <!-- Poster Image as Title -->
-            <div class="mb-6 relative group inline-block">
-                <!-- 
-                   NOTE: This attempts to use the uploaded file name. 
-                   If the image doesn't load, ensure the file is in the same directory 
-                   or replace 'image_14d897.jpg' with your image URL.
-                -->
-                <img 
-                    src="image_14d897.jpg" 
-                    onerror="this.style.display='none'; document.getElementById('backup-title').style.display='block';"
-                    alt="Experience Kamikochi Poster" 
-                    class="h-auto max-h-[300px] mx-auto rounded-lg shadow-2xl border-4 border-white/20 object-contain"
-                >
-                
-                <!-- Fallback Title (Hidden by default, shows if image fails) -->
-                <h1 id="backup-title" style="display:none;" class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Experience Kamikochi: the ultimate Team Retreat</h1>
-            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Experience Kamikochi: the ultimate Team Retreat</h1>
 
             <p class="text-lg md:text-xl font-light text-gray-200">Bangkok • Tokyo • Matsumoto • Kamikochi</p>
             <div class="mt-6 inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30">
@@ -123,7 +108,7 @@
             <div class="md:w-5/12 order-3 px-4">
                 <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1542296332-2e449c6ddad9?q=80&w=640&auto=format&fit=crop" alt="Flight Departure" class="w-full h-32 object-cover">
+                        <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?q=80&w=640&auto=format&fit=crop" alt="Flight Departure" class="w-full h-32 object-cover">
                         <span class="img-credit">Img: Unsplash</span>
                     </div>
                     <div class="p-6">
@@ -173,6 +158,15 @@
                                 <p class="text-sm text-orange-700 mt-1">Co-working at Narita/Haneda upon arrival.</p>
                             </div>
                         </div>
+
+                        <!-- Overnight Section -->
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-start">
+                            <i class="fas fa-bed mt-1 mr-3 text-blue-500"></i>
+                            <div>
+                                <span class="font-bold text-sm block text-gray-800">Overnight</span>
+                                <span class="text-gray-600 text-sm">Stay in Tokyo.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,10 +206,11 @@
                                     <span class="text-gray-600 text-sm">Visit Matsumoto Castle (Black Crow Castle) & Nakamachi Street.</span>
                                 </div>
                             </li>
-                            <li class="flex items-start">
+                            <!-- Overnight Section (Existing) -->
+                            <li class="flex items-start pt-2 border-t border-gray-100">
                                 <i class="fas fa-bed mt-1 mr-3 text-purple-500"></i>
                                 <div>
-                                    <span class="font-semibold block">Overnight</span>
+                                    <span class="font-bold text-sm block text-gray-800">Overnight</span>
                                     <span class="text-gray-600 text-sm">Stay in Matsumoto.</span>
                                 </div>
                             </li>
@@ -240,14 +235,24 @@
             <div class="md:w-5/12 order-3 px-4">
                 <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-red-500">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1528360983277-13d9b152c6d4?q=80&w=640&auto=format&fit=crop" alt="Kamikochi Nature" class="w-full h-32 object-cover">
+                        <!-- Updated Kamikochi Image -->
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=640&auto=format&fit=crop" alt="Kamikochi Nature" class="w-full h-32 object-cover">
                         <span class="img-credit">Img: Unsplash</span>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-lg mb-2 text-red-700">Day Trip to Kamikochi</h4>
                         <p class="text-gray-600 mb-3 text-sm">One of Japan's most spectacular mountain resorts. <span class="text-red-500 font-bold">Note: It will be significantly cooler here. Bring a jacket!</span></p>
-                        <div class="flex items-center text-sm text-gray-500">
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
                             <i class="fas fa-bus-alt mr-2"></i> Travel back to Matsumoto in the evening.
+                        </div>
+
+                        <!-- Overnight Section -->
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-start">
+                            <i class="fas fa-bed mt-1 mr-3 text-red-500"></i>
+                            <div>
+                                <span class="font-bold text-sm block text-gray-800">Overnight</span>
+                                <span class="text-gray-600 text-sm">Stay in Matsumoto.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,7 +274,8 @@
             <div class="md:w-5/12 order-3 px-4">
                 <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-yellow-400">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1605619159935-779838706346?q=80&w=640&auto=format&fit=crop" alt="Shinhotaka Ropeway View" class="w-full h-32 object-cover">
+                        <!-- Updated Shinhotaka/Ropeway Image -->
+                        <img src="https://images.unsplash.com/photo-1548588627-f978862b85e1?q=80&w=640&auto=format&fit=crop" alt="Shinhotaka Ropeway View" class="w-full h-32 object-cover">
                         <span class="img-credit">Img: Unsplash</span>
                     </div>
                     <div class="p-6">
@@ -284,6 +290,15 @@
                             <div class="border-l-4 border-gray-400 bg-gray-50 pl-4 py-2">
                                 <h5 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Public Transport</h5>
                                 <p class="text-gray-600 text-sm mt-1">Late morning departure (10-11 AM) from Matsumoto back to Tokyo.</p>
+                            </div>
+                        </div>
+
+                        <!-- Overnight Section -->
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-start">
+                            <i class="fas fa-bed mt-1 mr-3 text-yellow-500"></i>
+                            <div>
+                                <span class="font-bold text-sm block text-gray-800">Overnight</span>
+                                <span class="text-gray-600 text-sm">Stay in Tokyo.</span>
                             </div>
                         </div>
                     </div>
@@ -331,6 +346,15 @@
                                  <span class="absolute top-0 right-0 bg-orange-200 text-orange-800 text-xs px-2 py-1 rounded-bl-lg font-bold">WORK MODE</span>
                                 <h5 class="font-bold text-orange-800"><i class="fas fa-wifi mr-2"></i>Remote Work</h5>
                                 <p class="text-sm text-orange-700 mt-1">Work from hotel or find a nice cafe with Wi-Fi (e.g., Tsutaya Books/Starbucks).</p>
+                            </div>
+                        </div>
+
+                        <!-- Overnight Section -->
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-start">
+                            <i class="fas fa-bed mt-1 mr-3 text-pink-500"></i>
+                            <div>
+                                <span class="font-bold text-sm block text-gray-800">Overnight</span>
+                                <span class="text-gray-600 text-sm">Stay in Tokyo.</span>
                             </div>
                         </div>
                     </div>
