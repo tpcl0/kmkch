@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Kamikochi: the ultimate Team Retreat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .hero-bg {
+            /* Changed to Unsplash image: Tokyo Night */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Timeline Connector Line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px; /* Adjust based on icon size */
+            width: 2px;
+            background: #cbd5e1;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                margin-left: -1px;
+            }
+        }
+
+        .weather-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #bae6fd;
+        }
+
+        .img-credit {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-top-left-radius: 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-[400px] flex items-center justify-center text-white text-center px-4 shadow-lg py-12">
+        <!-- Hero Background Credit -->
+        <div class="absolute bottom-2 right-2 text-[10px] opacity-50">Background: Unsplash</div>
+
+        <div class="w-full max-w-4xl relative z-10">
+            <!-- Poster Image as Title -->
+            <div class="mb-6 relative group inline-block">
+                <!-- 
+                   NOTE: This attempts to use the uploaded file name. 
+                   If the image doesn't load, ensure the file is in the same directory 
+                   or replace 'image_14d897.jpg' with your image URL.
+                -->
+                <img 
+                    src="image_14d897.jpg" 
+                    onerror="this.style.display='none'; document.getElementById('backup-title').style.display='block';"
+                    alt="Experience Kamikochi Poster" 
+                    class="h-auto max-h-[300px] mx-auto rounded-lg shadow-2xl border-4 border-white/20 object-contain"
+                >
+                
+                <!-- Fallback Title (Hidden by default, shows if image fails) -->
+                <h1 id="backup-title" style="display:none;" class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Experience Kamikochi: the ultimate Team Retreat</h1>
+            </div>
+
+            <p class="text-lg md:text-xl font-light text-gray-200">Bangkok • Tokyo • Matsumoto • Kamikochi</p>
+            <div class="mt-6 inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full border border-white/30">
+                <i class="far fa-calendar-alt mr-2"></i> May 28 - June 3, 2026
+            </div>
+            
+            <!-- Tagline -->
+            <p class="mt-3 text-yellow-300 font-bold uppercase tracking-wide text-sm drop-shadow-md">
+                <i class="fas fa-check-circle mr-2"></i>Take only 2 days off work!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-12 relative timeline-line">
+
+        <!-- Day 1 (Thursday - Orange) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-center group">
+            <div class="md:w-5/12 md:text-right order-1 px-4">
+                <h3 class="text-2xl font-bold text-gray-900">Departure</h3>
+                <p class="text-gray-500 font-medium">Thursday, May 28</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge">
+                    <i class="fas fa-cloud-sun"></i> Tokyo: 24°C / 17°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-orange-500 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0">
+                <i class="fas fa-plane-departure text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542296332-2e449c6ddad9?q=80&w=640&auto=format&fit=crop" alt="Flight Departure" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Bangkok <i class="fas fa-long-arrow-alt-right mx-2 text-gray-400"></i> Tokyo</h4>
+                        <p class="text-gray-600">Flight from BKK to Tokyo (NRT or HND).</p>
+                        <div class="mt-3 text-sm text-gray-500 bg-gray-50 p-2 rounded">
+                            <i class="fas fa-info-circle mr-1"></i> Flight times vary based on booking.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 (Friday - Blue) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-start group">
+            <div class="md:w-5/12 md:text-right order-1 px-4 md:mt-6">
+                <h3 class="text-2xl font-bold text-gray-900">Arrival & Setup</h3>
+                <p class="text-gray-500 font-medium">Friday, May 29</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge">
+                    <i class="fas fa-sun"></i> Tokyo: 25°C / 18°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0 md:mt-6">
+                <i class="fas fa-laptop-house text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=640&auto=format&fit=crop" alt="Tokyo City" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <!-- Option A -->
+                            <div class="border border-green-200 bg-green-50 rounded-lg p-4 relative">
+                                <span class="absolute top-0 right-0 bg-green-200 text-green-800 text-xs px-2 py-1 rounded-bl-lg font-bold">VACATION MODE</span>
+                                <h5 class="font-bold text-green-800"><i class="fas fa-camera mr-2"></i>Free Day in Tokyo</h5>
+                                <p class="text-sm text-green-700 mt-1">Check into hotel, explore nearby areas, grab a suica card.</p>
+                            </div>
+                            
+                            <div class="text-center text-gray-400 text-sm font-bold">- OR -</div>
+
+                            <!-- Option B -->
+                            <div class="border border-orange-200 bg-orange-50 rounded-lg p-4 relative">
+                                 <span class="absolute top-0 right-0 bg-orange-200 text-orange-800 text-xs px-2 py-1 rounded-bl-lg font-bold">WORK MODE</span>
+                                <h5 class="font-bold text-orange-800"><i class="fas fa-wifi mr-2"></i>Remote Work</h5>
+                                <p class="text-sm text-orange-700 mt-1">Co-working at Narita/Haneda upon arrival.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 (Saturday - Purple) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-center group">
+            <div class="md:w-5/12 md:text-right order-1 px-4">
+                <h3 class="text-2xl font-bold text-gray-900">To the Alps</h3>
+                <p class="text-gray-500 font-medium">Saturday, May 30</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge bg-teal-50 text-teal-700 border-teal-200">
+                    <i class="fas fa-cloud"></i> Matsumoto: 23°C / 12°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-purple-600 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0">
+                <i class="fas fa-train text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-purple-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=640&auto=format&fit=crop" alt="Matsumoto Castle" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="far fa-clock mt-1 mr-3 text-purple-500"></i>
+                                <div>
+                                    <span class="font-semibold block">10:00 - 11:00 AM</span>
+                                    <span class="text-gray-600 text-sm">Check out & Transit to Matsumoto (Bus/Train)</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3 text-purple-500"></i>
+                                <div>
+                                    <span class="font-semibold block">Afternoon: Matsumoto Explore</span>
+                                    <span class="text-gray-600 text-sm">Visit Matsumoto Castle (Black Crow Castle) & Nakamachi Street.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bed mt-1 mr-3 text-purple-500"></i>
+                                <div>
+                                    <span class="font-semibold block">Overnight</span>
+                                    <span class="text-gray-600 text-sm">Stay in Matsumoto.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 (Sunday - Red) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-center group">
+            <div class="md:w-5/12 md:text-right order-1 px-4">
+                <h3 class="text-2xl font-bold text-gray-900">Kamikochi</h3>
+                <p class="text-gray-500 font-medium">Sunday, May 31</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge bg-red-50 text-red-700 border-red-200">
+                    <i class="fas fa-temperature-low"></i> Kamikochi: 16°C / 7°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-red-600 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0">
+                <i class="fas fa-mountain text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-red-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d9b152c6d4?q=80&w=640&auto=format&fit=crop" alt="Kamikochi Nature" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2 text-red-700">Day Trip to Kamikochi</h4>
+                        <p class="text-gray-600 mb-3 text-sm">One of Japan's most spectacular mountain resorts. <span class="text-red-500 font-bold">Note: It will be significantly cooler here. Bring a jacket!</span></p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-bus-alt mr-2"></i> Travel back to Matsumoto in the evening.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 (Monday - Yellow) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-start group">
+            <div class="md:w-5/12 md:text-right order-1 px-4 md:mt-6">
+                <h3 class="text-2xl font-bold text-gray-900">Return to City</h3>
+                <p class="text-gray-500 font-medium">Monday, June 1</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge">
+                    <i class="fas fa-cloud-sun-rain"></i> Tokyo: 23°C / 18°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-yellow-400 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0 md:mt-6">
+                <i class="fas fa-exchange-alt text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-yellow-400">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1605619159935-779838706346?q=80&w=640&auto=format&fit=crop" alt="Shinhotaka Ropeway View" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <!-- Option A -->
+                            <div class="border-l-4 border-purple-400 bg-gray-50 pl-4 py-2">
+                                <h5 class="font-bold text-gray-800 text-sm uppercase tracking-wide">With Rental Car</h5>
+                                <p class="text-gray-600 text-sm mt-1">Visit <strong>Shinhotaka Ropeway</strong> for panoramic views. Drive back to Tokyo in the evening.</p>
+                            </div>
+                            
+                            <!-- Option B -->
+                            <div class="border-l-4 border-gray-400 bg-gray-50 pl-4 py-2">
+                                <h5 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Public Transport</h5>
+                                <p class="text-gray-600 text-sm mt-1">Late morning departure (10-11 AM) from Matsumoto back to Tokyo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 6 (Tuesday - Pink) -->
+        <div class="relative z-10 mb-12 md:flex md:justify-between items-center group">
+            <div class="md:w-5/12 md:text-right order-1 px-4">
+                <h3 class="text-2xl font-bold text-gray-900">Tokyo Free Day</h3>
+                <p class="text-gray-500 font-medium">Tuesday, June 2</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge bg-gray-100 text-gray-600 border-gray-300">
+                    <i class="fas fa-cloud-showers-heavy"></i> Tokyo: 23°C (Chance of Rain)
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-pink-500 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0">
+                <i class="fas fa-shopping-bag text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-pink-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=640&auto=format&fit=crop" alt="Shibuya Crossing" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <!-- Option A -->
+                            <div class="border border-pink-200 bg-pink-50 rounded-lg p-4 relative">
+                                <span class="absolute top-0 right-0 bg-pink-200 text-pink-800 text-xs px-2 py-1 rounded-bl-lg font-bold">VACATION MODE</span>
+                                <h5 class="font-bold text-pink-800"><i class="fas fa-camera mr-2"></i>City Exploration</h5>
+                                <p class="text-sm text-pink-700 mt-1">Full day to explore Tokyo. Great time for indoor activities if it rains (Museums, Department Stores).</p>
+                                <div class="mt-2 flex flex-wrap gap-2">
+                                    <span class="bg-white text-pink-800 text-xs px-2 py-1 rounded border border-pink-100">Shibuya</span>
+                                    <span class="bg-white text-pink-800 text-xs px-2 py-1 rounded border border-pink-100">Shinjuku</span>
+                                    <span class="bg-white text-pink-800 text-xs px-2 py-1 rounded border border-pink-100">Akihabara</span>
+                                    <span class="bg-white text-pink-800 text-xs px-2 py-1 rounded border border-pink-100">Ginza</span>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center text-gray-400 text-sm font-bold">- OR -</div>
+
+                            <!-- Option B -->
+                            <div class="border border-orange-200 bg-orange-50 rounded-lg p-4 relative">
+                                 <span class="absolute top-0 right-0 bg-orange-200 text-orange-800 text-xs px-2 py-1 rounded-bl-lg font-bold">WORK MODE</span>
+                                <h5 class="font-bold text-orange-800"><i class="fas fa-wifi mr-2"></i>Remote Work</h5>
+                                <p class="text-sm text-orange-700 mt-1">Work from hotel or find a nice cafe with Wi-Fi (e.g., Tsutaya Books/Starbucks).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 7 (Wednesday - Green) -->
+        <div class="relative z-10 md:flex md:justify-between items-center group">
+            <div class="md:w-5/12 md:text-right order-1 px-4">
+                <h3 class="text-2xl font-bold text-gray-900">Homebound</h3>
+                <p class="text-gray-500 font-medium">Wednesday, June 3</p>
+                <div class="mt-2 md:ml-auto md:mr-0 mr-auto ml-0 weather-badge">
+                    <i class="fas fa-cloud"></i> Tokyo: 24°C / 19°C
+                </div>
+            </div>
+            <div class="flex items-center justify-center order-2 bg-green-600 text-white w-10 h-10 rounded-full shadow-lg border-4 border-white mx-auto my-4 md:my-0">
+                <i class="fas fa-plane-arrival text-sm"></i>
+            </div>
+            <div class="md:w-5/12 order-3 px-4">
+                <div class="bg-white overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-500">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=640&auto=format&fit=crop" alt="Airport Departure" class="w-full h-32 object-cover">
+                        <span class="img-credit">Img: Unsplash</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">Tokyo <i class="fas fa-long-arrow-alt-right mx-2 text-gray-400"></i> Bangkok</h4>
+                        <p class="text-gray-600">Fly back to Thailand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Flight Suggestions Section -->
+    <section class="max-w-5xl mx-auto px-4 py-8 mb-4">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8"><i class="fas fa-plane-circle-check mr-2 text-blue-600"></i>Flight Suggestions</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Vietnam Airlines -->
+            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-yellow-500 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-bold text-lg text-blue-900">Vietnam Airlines</h3>
+                        <div class="flex flex-col items-end">
+                             <i class="fas fa-plane text-yellow-500"></i>
+                             <span class="text-lg font-bold text-green-600">฿10,964</span>
+                        </div>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-semibold">Full Service</span>
+                    
+                    <!-- Schedule -->
+                    <div class="mt-4 bg-gray-50 rounded-lg p-3 border border-gray-100">
+                        <!-- Outbound -->
+                        <div class="mb-2 border-b border-gray-200 pb-2">
+                            <div class="text-xs text-gray-500 font-bold uppercase">Outbound</div>
+                            
+                            <!-- Leg 1 -->
+                            <div class="flex justify-between items-center mt-2">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">18:10</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">VN 626</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">19:45</span>
+                                    <span class="text-xs text-gray-500 block">DAD</span>
+                                </div>
+                            </div>
+
+                            <!-- Layover -->
+                            <div class="my-2 bg-orange-50 rounded p-1 text-center border border-orange-100">
+                                <span class="text-xs text-orange-700 font-semibold"><i class="far fa-clock mr-1"></i>Layover DAD (4h 25m)</span>
+                            </div>
+
+                            <!-- Leg 2 -->
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">00:10</span>
+                                    <span class="text-xs text-gray-500 block">DAD (+1)</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">VN 318</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">07:35</span>
+                                    <span class="text-xs text-gray-500 block">NRT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inbound -->
+                        <div>
+                            <div class="text-xs text-gray-500 font-bold uppercase mt-2">Inbound • June 3</div>
+                            <!-- Leg 1 -->
+                            <div class="flex justify-between items-center mt-1">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">10:00</span>
+                                    <span class="text-xs text-gray-500 block">NRT</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">VN 311</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">13:30</span>
+                                    <span class="text-xs text-gray-500 block">HAN</span>
+                                </div>
+                            </div>
+                            
+                             <!-- Layover -->
+                            <div class="my-2 bg-orange-50 rounded p-1 text-center border border-orange-100">
+                                <span class="text-xs text-orange-700 font-semibold"><i class="far fa-clock mr-1"></i>Layover HAN (~2h 25m)</span>
+                            </div>
+
+                             <!-- Leg 2 -->
+                            <div class="flex justify-between items-center mt-1">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">15:55</span>
+                                    <span class="text-xs text-gray-500 block">HAN</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">VN 619</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">18:05</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-4 text-sm text-gray-600 space-y-3">
+                         <li class="flex items-center font-medium text-gray-800"><i class="fas fa-suitcase text-green-500 mr-3 w-4"></i> 23kg Luggage Included</li>
+                         <li class="flex items-center"><i class="fas fa-utensils text-gray-400 mr-3 w-4"></i> Meal Included</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AirAsia + Air China Mix -->
+             <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-indigo-600 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-bold text-lg text-indigo-900">Mix: AirAsia + Air China</h3>
+                        <div class="flex flex-col items-end">
+                             <i class="fas fa-plane text-indigo-600"></i>
+                             <span class="text-lg font-bold text-green-600">฿8,475</span>
+                        </div>
+                    </div>
+                    <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full font-semibold">Hybrid</span>
+                    
+                    <!-- Schedule -->
+                    <div class="mt-4 bg-gray-50 rounded-lg p-3 border border-gray-100">
+                        <div class="mb-2 border-b border-gray-200 pb-2">
+                            <div class="text-xs text-gray-500 font-bold uppercase">Outbound (AirAsia)</div>
+                            <div class="flex justify-between items-center mt-2">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">23:55</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-long-arrow-alt-right text-gray-300"></i>
+                                    <span class="text-[10px] text-gray-400">XJ 600</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">08:00</span>
+                                    <span class="text-xs text-gray-500 block">NRT (+1)</span>
+                                </div>
+                            </div>
+                            <div class="text-xs text-red-500 mt-1">*Luggage Extra (฿5,050 base)</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-bold uppercase">Inbound (Air China)</div>
+                            <!-- Leg 1 -->
+                            <div class="flex justify-between items-center mt-2">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">14:20</span>
+                                    <span class="text-xs text-gray-500 block">HND</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">CA 182</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">17:15</span>
+                                    <span class="text-xs text-gray-500 block">PEK</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Layover -->
+                            <div class="my-2 bg-orange-50 rounded p-1 text-center border border-orange-100">
+                                <span class="text-xs text-orange-700 font-semibold"><i class="far fa-clock mr-1"></i>Layover PEK (~2h 25m)</span>
+                            </div>
+
+                             <!-- Leg 2 -->
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">19:40</span>
+                                    <span class="text-xs text-gray-500 block">PEK</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-plane text-gray-300 text-xs transform rotate-45"></i>
+                                    <span class="text-[10px] text-gray-400">CA 979</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">23:45</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                            </div>
+                            <div class="text-xs text-green-600 mt-1">*Luggage Included (฿3,425 base)</div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-4 text-sm text-gray-600 space-y-3">
+                         <li class="flex items-center font-bold text-gray-700"><i class="fas fa-info-circle text-blue-500 mr-3 w-4"></i> Mixed Policy</li>
+                         <li class="flex items-center text-xs text-gray-500">Pay attention to different baggage rules per leg.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- AirAsia Roundtrip -->
+             <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-500 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-bold text-lg text-red-600">AirAsia (Direct)</h3>
+                         <div class="flex flex-col items-end">
+                             <i class="fas fa-plane text-red-500"></i>
+                             <span class="text-lg font-bold text-green-600">฿11,428</span>
+                        </div>
+                    </div>
+                    <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full font-semibold">Low Cost</span>
+                    
+                    <!-- Schedule -->
+                    <div class="mt-4 bg-gray-50 rounded-lg p-3 border border-gray-100">
+                        <div class="mb-2 border-b border-gray-200 pb-2">
+                            <div class="text-xs text-gray-500 font-bold uppercase">Outbound • May 28</div>
+                            <div class="flex justify-between items-center mt-2">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">23:55</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-long-arrow-alt-right text-gray-300"></i>
+                                    <span class="text-[10px] text-gray-400">XJ 600</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">08:00</span>
+                                    <span class="text-xs text-gray-500 block">NRT (+1)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-bold uppercase">Inbound • June 3</div>
+                            <div class="flex justify-between items-center mt-2">
+                                <div>
+                                    <span class="font-mono text-sm font-bold text-gray-800">09:15</span>
+                                    <span class="text-xs text-gray-500 block">NRT</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-long-arrow-alt-right text-gray-300"></i>
+                                    <span class="text-[10px] text-gray-400">XJ 607</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono text-sm font-bold text-gray-800">14:00</span>
+                                    <span class="text-xs text-gray-500 block">BKK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-4 text-sm text-gray-600 space-y-3">
+                         <li class="flex items-center font-bold text-red-600"><i class="fas fa-ban text-red-500 mr-3 w-4"></i> Luggage NOT Included</li>
+                         <li class="flex items-center"><i class="fas fa-utensils text-gray-400 mr-3 w-4"></i> Meal Purchase Req.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section class="max-w-4xl mx-auto px-4 py-8 mb-12">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8"><i class="fas fa-wallet mr-2 text-green-600"></i>Estimated Budget</h2>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-0">
+                <!-- Breakdown -->
+                <div class="p-8">
+                    <h3 class="font-bold text-xl mb-6 text-gray-700">Cost Breakdown (Per Person)</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span class="text-gray-600"><i class="fas fa-plane mr-2 w-6 text-center text-blue-400"></i>Flights (BKK-TYO)</span>
+                            <span class="font-semibold text-gray-800">฿10,000 - 17,000</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span class="text-gray-600"><i class="fas fa-hotel mr-2 w-6 text-center text-indigo-400"></i>Accommodation (5N)</span>
+                            <span class="font-semibold text-gray-800">~¥66,000 <span class="text-xs text-gray-400">(฿15,500)</span></span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span class="text-gray-600"><i class="fas fa-train mr-2 w-6 text-center text-teal-400"></i>Transport (Train/Bus)</span>
+                            <span class="font-semibold text-gray-800">~¥30,000 <span class="text-xs text-gray-400">(฿7,000)</span></span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span class="text-gray-600"><i class="fas fa-utensils mr-2 w-6 text-center text-orange-400"></i>Food & Dining</span>
+                            <span class="font-semibold text-gray-800">~¥35,000 <span class="text-xs text-gray-400">(฿8,000)</span></span>
+                        </div>
+                        <div class="flex justify-between items-center pb-2">
+                            <span class="text-gray-600"><i class="fas fa-ticket-alt mr-2 w-6 text-center text-pink-400"></i>Misc / SIM / Tickets</span>
+                            <span class="font-semibold text-gray-800">~¥10,000 <span class="text-xs text-gray-400">(฿2,300)</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total -->
+                <div class="bg-gray-900 text-white p-8 flex flex-col justify-center items-center text-center">
+                    <h3 class="text-lg font-light opacity-80 uppercase tracking-widest mb-2">Total Estimate</h3>
+                    <div class="text-5xl font-bold mb-2 text-green-400">฿47,000</div>
+                    <div class="text-sm opacity-60 mb-6">(Approx. ¥205,000)</div>
+                    <p class="text-xs opacity-50 px-8">
+                        *Estimates based on mid-range travel style. Does not include shopping or luxury dining. Exchange rate estimated at 100 JPY = 23 THB.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 text-center py-8">
+        <p class="mb-2">Japan Trip 2026</p>
+        <p class="text-xs text-gray-500 mb-1">Itinerary subject to change based on weather and traffic.</p>
+        <p class="text-xs text-gray-400 mb-4 italic">*Weather forecast is an estimate and is subject to change.</p>
+        
+        <div class="mt-6 pt-6 border-t border-gray-700 mx-auto max-w-lg px-4">
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Image Credits</p>
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-gray-500">
+                <span><i class="fas fa-camera mr-1"></i>Header & Locations: Unsplash</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
